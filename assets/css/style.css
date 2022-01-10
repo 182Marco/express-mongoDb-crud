@@ -16,6 +16,10 @@
 a {
   text-decoration: none;
   font-family: 'PT Sans', sans-serif;
+  background-color: #fff;
+}
+.text-center a {
+  background-color: transparent;
 }
 
 .container {
@@ -116,6 +120,10 @@ table {
   color: #fff;
   background-color: var(--dark);
   border-color: #32383e;
+}
+
+tr:nth-child(even) {
+  background: #eef3ff;
 }
 
 @media only screen and (max-width: 1024px) {
