@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
-const connectDb = require('./server/database/connection')
+const connectDb = require('./server/database/connection');
 const app = express();
 dotenv.config({ path: 'config.env' });
 
@@ -25,8 +25,8 @@ app.use('/js', express.static(path.resolve(__dirname, 'assets/js')));
 // css/stle.css
 
 // load routes
-app.use(('/'), require('./server/routes/router'))
-// 
+app.use('/', require('./server/routes/router'));
+//
 app.listen(PORT, () =>
   console.log(`Server is running in http://localhost:${PORT}`)
 );

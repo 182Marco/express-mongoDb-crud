@@ -15,10 +15,12 @@ exports.create = (req, res) => {
     gender: req.body.gender,
     status: req.body.status,
   });
-  // dave user
+  // save user
   user
     .save(user)
-    .then(data => res.send(data))
+    .then(data => {
+      res.redirect('/');
+    })
     .catch(er =>
       res.status(500).send({
         message: er.message || 'some errror occurred while creating new user',
